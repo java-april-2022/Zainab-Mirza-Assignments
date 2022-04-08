@@ -1,4 +1,5 @@
 import java.util.Date; 
+import java.util.ArrayList;
 
 public class AlfredQuotes {
     
@@ -35,8 +36,14 @@ public class AlfredQuotes {
         }
     }
 
-    public String yellRobot(String name) {
-        name.
+    public void arrayList() {
+        ArrayList<String> myArray = new ArrayList<String>();
+        myArray.add("Zainab"); 
+        myArray.add("Reena"); 
+        myArray.add("Sana"); 
+        myArray.add("Adam"); 
+        System.out.println(myArray);
     }
+
 }
 
