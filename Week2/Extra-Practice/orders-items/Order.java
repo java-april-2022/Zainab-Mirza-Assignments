@@ -48,27 +48,28 @@ public class Order {
 
     public String getStatusMessage(){
         if (this.ready == true){
-            System.out.println("Your Order is Ready.");
-        } else {
+            return "Your Order is Ready.";
+        } 
+        else {
             return "Thank you for waiting. Your order will be ready soon.";
         }
     }
 
     public double getOrderTotal(){
-        double total = 0.0;
-        for(Item i: this.items){
-            total += i.PriceOfItem(); 
+        int sum = 0;
+        for(int i =0; i < this.items.size(); i++){
+            sum += this.items.get(i).getPriceOfItem(); 
         }
-        return total; 
+        return sum; 
     }
 
     public void display(){
-        System.out.printf("Customer name: %s", this.name); 
-        for(Item item: this.items){
-            System.out.println(i.getNameOfItem() + " - $" + i.PriceOfItem()); 
+        System.out.printf("Customer name: %s\n", this.name); 
+        for(int i =0; i<this.items.size(); i++){
+            System.out.printf("%s -- %s\n", this.items.get(i).getNameOfItem(), this.items.get(i).getPriceOfItem()); 
         }
         System.out.println("Total: $" + this.getOrderTotal());
     }
-
 }
+
 

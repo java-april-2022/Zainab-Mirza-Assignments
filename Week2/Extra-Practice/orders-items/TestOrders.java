@@ -20,7 +20,13 @@ public class TestOrders {
         order1.addItem(item1); 
         order1.addItem(item2); 
 
+        order2.addItem(item3); 
+        order2.addItem(item1); 
+
         System.out.println(order1.getStatusMessage()); 
+        order2.display();
+
+        order3.getOrderTotal();
     }
 
 }
