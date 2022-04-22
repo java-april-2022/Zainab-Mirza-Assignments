@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.container {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.card-body {
+	font-family: 'Fredoka';
+}
+
+body {
+	background-color: #aa7294; 
+}
+
+.btn-primary {
+	background-color: #aa7294; 
+	border: none; 
+}
