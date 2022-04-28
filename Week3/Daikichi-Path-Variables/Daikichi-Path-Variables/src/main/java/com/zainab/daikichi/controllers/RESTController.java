@@ -1,12 +1,27 @@
 package com.zainab.daikichi.controllers;
 
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMapping; 
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable; 
 
-@RestController
+@Controller
 @RequestMapping("/daikichi")
 public class RESTController {
+	@RequestMapping("")
+	public String index(Model model) {
+		
+		String firstName = "Zainab"; 
+		String lastName = "Mirza"; 
+		String email = "gotzainab1@hotmail.com";
+		
+		model.addAttribute("first", firstName);
+		model.addAttribute("last", lastName);
+		model.addAttribute("email", email);
+		return "demo.jsp"; 
+	}
+	
+	
 	@RequestMapping("/travel/{city}")
 	public String travel(@PathVariable("city") String city) {
 		return "Congratulations! You will soon travel to " + city; 

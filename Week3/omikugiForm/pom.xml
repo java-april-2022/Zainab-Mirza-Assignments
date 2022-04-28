@@ -8,12 +8,12 @@
 		<version>2.6.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.codingdojo.hopper</groupId>
-	<artifactId>HopperReceipt</artifactId>
+	<groupId>com.codingdojo.form</groupId>
+	<artifactId>omikugiForm</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>HopperReceipt</name>
-	<description>spring practice</description>
+	<name>omikugiForm</name>
+	<description>session practice </description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>

@@ -6,13 +6,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Testing</title>
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-	<h1>Customer Name: <c:out value="${name}"></c:out></h1>
-	<h2>Item name: <c:out value="${item}"></c:out></h2>
-	<h2>Price: <c:out value="${price}"></c:out></h2>
-	<h2>Description: <c:out value="${description}"></c:out></h2>
-	<h2>Vendor: <c:out value="${vendor}"></c:out></h2>
+	<div class="card">
+		<div class="card-body text-center">
+			<h1>Customer Name: <c:out value="${name}"></c:out></h1>
+			<h2>Item name: <c:out value="${item}"></c:out></h2>
+			<h2>Price: <c:out value="${price}"></c:out></h2>
+			<h2>Description: <c:out value="${description}"></c:out></h2>
+			<h2>Vendor: <c:out value="${vendor}"></c:out></h2>	
+		</div>
+	</div>
 </body>
 </html>
