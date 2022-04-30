@@ -13,38 +13,13 @@
 </head>
 <body>
 <div class ="container">
-	<header>
-		<h2>Expenses</h2>
-	</header>
-	<table class="table">
-		<thead>
-		
-			<tr>
-				<th>Expense</th>
-				<th>Vendor</th>
-				<th>Amount</th>
-				<th>Actions</th>
-			</tr>
-	
-		</thead>
-		<tbody>
-		<c:forEach var= "expense" items="${expenses}">
-			<tr>
-				<td>${expense.expenseName }</td>
-				<td>${expense.vendor }</td>
-				<td>$${expense.amount }</td>
-				<td><a href="/expenses/edit/${expense.id}">Edit</a></td>
-				<td><a href="/expenses/delete/${expense.id}">Delete</a></td>
-			</tr>
-		</c:forEach>
-		</tbody>
-	</table>
-	<div>
 		<header>
-			<h3>Add an Expense</h3>
+			<h3 class="text-success">Edit Expense</h3>
+			<a href="/expenses" class="btn btn-primary">Home</a>
 		</header>
 		<main>		
-		<form:form action="/expenses" method="post" modelAttribute="expense">
+		<form:form action="/update/${expense.id}" method="put" modelAttribute="expense">
+		<input type="hidden" name="_method" value="put">
 		<p>
         <form:label path="expenseName">Name of Expense:</form:label>
         <form:errors class="text-danger" path="expenseName"/>
@@ -61,10 +36,9 @@
         <form:input path="amount"/>
     </p>
     
-    <input type="submit" value="Add"/>
+    <input type="submit" class="btn btn-secondary" value="Update"/>
 		</form:form>
 		</main>
 	</div>
-</div>
 </body>
 </html>
