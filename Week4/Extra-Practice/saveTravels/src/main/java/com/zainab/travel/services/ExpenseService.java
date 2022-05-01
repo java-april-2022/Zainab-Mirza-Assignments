@@ -45,6 +45,12 @@ public class ExpenseService {
 		expenseRepo.save(expense); 
 		
 	}
+
+
+	public void delete(Long id) {
+		expenseRepo.deleteById(id);
+		
+	}
 	 
 	
 }

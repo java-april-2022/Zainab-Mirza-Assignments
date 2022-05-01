@@ -9,14 +9,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Save Travels</title>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Fredoka:wght@500&family=Josefin+Sans&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
 <div class ="container">
-	<header>
+	<header class="text-center">
 		<h2>Expenses</h2>
 	</header>
-	<table class="table">
+	<table class="table mx-auto">
 		<thead>
 		
 			<tr>
@@ -30,40 +32,52 @@
 		<tbody>
 		<c:forEach var= "expense" items="${expenses}">
 			<tr>
-				<td>${expense.expenseName }</td>
+				<td><a href="/expenses/${expense.id}">${expense.expenseName}</a></td>
 				<td>${expense.vendor }</td>
 				<td>$${expense.amount }</td>
-				<td><a href="/expenses/edit/${expense.id}">Edit</a></td>
-				<td><a href="/expenses/delete/${expense.id}">Delete</a></td>
+				<td><a href="/expenses/edit/${expense.id}" class="btn btn-secondary">Edit</a> 
+				
+				<form:form action="/delete/${expense.id}" method="delete">
+				<button class="btn btn-danger">Delete</button>
+				</form:form>
+				
+				</td>
 			</tr>
 		</c:forEach>
 		</tbody>
 	</table>
-	<div>
+	<div class="card">
+		<div class= "card-body">
 		<header>
 			<h3>Add an Expense</h3>
 		</header>
-		<main>		
-		<form:form action="/expenses" method="post" modelAttribute="expense">
-		<p>
-        <form:label path="expenseName">Name of Expense:</form:label>
-        <form:errors class="text-danger" path="expenseName"/>
-        <form:input path="expenseName"/>
-    </p>
-    <p>
-        <form:label path="vendor">Vendor</form:label>
-        <form:errors class="text-danger" path="vendor"/>
-        <form:textarea path="vendor"/>
-    </p>
-    <p>
-        <form:label path="amount">Amount</form:label>
-        <form:errors class="text-danger" path="amount"/>
-        <form:input path="amount"/>
-    </p>
-    
-    <input type="submit" value="Add"/>
-		</form:form>
+		<main>	
+			<form:form action="/expenses" method="post" modelAttribute="expense">
+				<div class="row=mb-3">
+			        <form:label class="col-sm-2 col-form-label" path="expenseName">Expense:</form:label>
+			        <form:errors class="text-danger" path="expenseName"/>
+			        <div class="col-sm-10">
+				        <form:input class="form-control" path="expenseName"/>
+				    </div>
+		   		</div>
+		        <div class="row=mb-3">
+			        <form:label class="col-sm-2 col-form-label" path="vendor">Vendor:</form:label>
+			        <form:errors class="text-danger" path="vendor"/>
+			        <div class="col-sm-10">
+				        <form:input class="form-control" path="vendor"/>
+				    </div>
+		   		</div>
+		        <div class="row=mb-3">
+			        <form:label class="col-sm-2 col-form-label" path="amount">Amount:</form:label>
+			        <form:errors class="text-danger" path="amount"/>
+			        <div class="col-sm-10">
+				        <form:input class="form-control" path="amount"/>
+				    </div>
+		   		</div>
+		    	<input class="btn btn-success" type="submit" value="Add"/>
+			</form:form>
 		</main>
+		</div>
 	</div>
 </div>
 </body>
