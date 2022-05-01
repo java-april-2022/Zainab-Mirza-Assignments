@@ -1,5 +1,4 @@
 package com.zainab.travel.controllers;
-
 import java.util.List;
 
 import javax.validation.Valid;

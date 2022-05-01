@@ -3,6 +3,7 @@ package com.zainab.travel.services;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.zainab.travel.models.Expense;
@@ -12,11 +13,8 @@ import com.zainab.travel.repositories.ExpenseRepository;
 public class ExpenseService {
 	
 	// this adds the expense repository as a dependency 
-	private final ExpenseRepository expenseRepo;
-	
-	public ExpenseService(ExpenseRepository expenseRepo) {
-		this.expenseRepo = expenseRepo; 
-	}
+	@Autowired
+	ExpenseRepository expenseRepo; 
 	
 	
 	// returns all expenses 

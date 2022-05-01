@@ -1,5 +1,4 @@
 package com.zainab.travel.models;
-
 import java.util.Date;
 
 import javax.persistence.Column;
