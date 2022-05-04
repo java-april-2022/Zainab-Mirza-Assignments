@@ -17,7 +17,7 @@
 	<div class="card">
 		<div class="card-body">
 			<h3 class="text-center">Add A Song</h3>
-			<a class="btn btn-primary text-center" href="/dashboard">Dashboard</a>
+			<a class="btn btn-primary" href="/dashboard">Dashboard</a>
 			<form:form action="/add" method="post" modelAttribute="song">
 				<div class="row=mb-3">
 				        <form:label class="col-sm-2 col-form-label" path="title">Title:</form:label>
