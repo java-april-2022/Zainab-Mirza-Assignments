@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.login {
+    width: 450px;
+}
+
+.register {
+    width: 600px;
+}
+
+.row {
+    margin-bottom: 15px;
+}
+
+
+main {
+    margin-top: 20px;
+}
+
+.btn-primary {
+	margin-top: 10px;
+}
