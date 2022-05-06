@@ -16,7 +16,7 @@
 <div class="container">
 	<main class="d-flex justify-content-evenly">
         <form:form action="/register" method="POST" modelAttribute="user" class="register">
-            <h2>Login</h2>
+            <h2>Register</h2>
             <div class="row=mb-3">
 				<form:label class="col-sm-2 col-form-label" path="userName">Username:</form:label>
 				
