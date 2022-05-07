@@ -4,9 +4,11 @@ nav {
 	margin: 10px;
 }
 
-#view {
-	border: 5px solid black;
+span {
+	color: #b1868f; 
+	
 }
+
 
 .card {
 	margin: 3px; 
@@ -34,4 +36,9 @@ nav {
 .btn-success:hover {
 	background-color: black; 
 	border: none;
+}
+
+
+body { 
+	font-family: 'Old Standard TT', sans-serif;
 }

@@ -9,6 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Book Club</title>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Fredoka:wght@500&family=Josefin+Sans&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -16,7 +17,7 @@
 <div class="container col-xl-10 col-xxl-8 px-4 py-5">
 	<div class="row align-items-center g-lg-5 py-5">
 		<div class="col-lg-7 text-center text-lg-start">
-			<h1 class="display-4 fw-bold lh-1 mb-3">Add a Book to your Shelf!</h1>
+			<h1 class="display-4 fw-bold lh-1 mb-3">Add a Book to your Shelf:</h1>
 			<p class="col-lg-10 fs-4"><a href="/dashboard" class="btn btn-primary">Back to shelves</a></p>
 		</div>
 		<div class="col-md-10 mx-auto col-lg-5">
