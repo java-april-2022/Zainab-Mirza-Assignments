@@ -37,7 +37,7 @@
 			    <c:if test="${book.user.id==loginUser.id}"> 
 			     	<p class="card-text">This book was read by you :) <br> Author: <em>${book.author}</em></p>
 			    </c:if>
-			    <a href="/books/${book.id}" class="btn btn-primary">Details</a>
+			    <a href="/books/${book.id}" class="btn btn-success">Details</a>
 			  </div>
 			</div>
 		</c:forEach>

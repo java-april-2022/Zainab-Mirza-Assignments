@@ -9,6 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Book Club</title>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Fredoka:wght@500&family=Josefin+Sans&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -18,7 +19,7 @@
 		<div class="col-lg-7 text-center text-lg-start">
 			<h1 class="display-4 fw-bold lh-1 mb-3">Edit Your Book</h1>
 			<p class="col-lg-10 fs-4">Do you hate it now? Maybe have some extra thoughts you'd like to add?</p>
-			<p class="col-lg-10 fs-4"><a href="/dashboard">Back to shelves</a></p>
+			<p class="col-lg-10 fs-4"><a class= "btn btn-primary" href="/dashboard">Back to shelves</a></p>
 		</div>
 		<div class="col-md-10 mx-auto col-lg-5">
         <form:form class="p-4 p-md-5 border rounded-3 bg-dark" action="/update/${book.id}" method="put" modelAttribute="book">
@@ -31,7 +32,7 @@
           	<form:errors class="text-danger" path="title"/>
           </div>
           <div class="form-floating mb-3">
-            <form:password path="author" class="form-control" id="floatingInput" placeholder="Author"/>
+            <form:input path="author" class="form-control" id="floatingInput" placeholder="Author"/>
             <form:label for="floatingInput" path="author">Author</form:label>
           </div>
           <div>
